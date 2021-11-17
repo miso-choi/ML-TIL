@@ -12,13 +12,20 @@ SKT에서 제공하는 CCTV영상 이미지 데이터를 준지도학습 기반�
 FasterRCNN API 사용 : torchvision.models.detection.fasterrcnn_resnet50_fpn(pretrained=True) 
 
 ## Source Code  
-- EDA
-- preprocessing     
+#### `EDA`  
+#### `preprocessing`
           
-- FasterRCNN_SSL_1  : labeled data로 모델 학습하여 구한 weight로 unlabeled data의 annotation 추론
-- FasterRCNN_SSL_2  : annotation 구한 unlabeled data + labeled data로 모델 학습
-- utils_ObjectDetection.py  :  모델 prediction mAP 계산
-- get_result_csv  :  모델 weight 4개의 예측 결과에 WBF(Weighted Boxes Fusion) 적용, csv파일로 저장
+#### `FasterRCNN_SSL_1`  
+- labeled data로 모델 학습하여 구한 weight로 unlabeled data의 annotation 추론  
+
+#### `FasterRCNN_SSL_2  `  
+- annotation 구한 unlabeled data + labeled data로 모델 학습  
+
+#### `utils_ObjectDetection.py  `  
+- 모델 prediction mAP 계산  
+
+#### `get_result_csv  `  
+- 모델 weight 4개의 예측 결과에 WBF(Weighted Boxes Fusion) 적용, csv파일로 저장
 
 ## 결과
-제출 결과 중 최고값은 mAP@IoU = 0.5 기준으로 53.3 입니다. (전체 순위 중 10위)
+mAP@IoU = 0.5 기준으로 53.3 에 도달했습니다. (전체 순위 중 10위)
